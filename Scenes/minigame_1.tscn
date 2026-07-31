@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://2dygqf64vbem"]
+
+[ext_resource type="Texture2D" uid="uid://cnl3q8obiwwnw" path="res://City4/Bright/Sky.png" id="1_11mgy"]
+[ext_resource type="Texture2D" uid="uid://b6dm6b7sc5t0x" path="res://City4/Bright/road.png" id="2_f6tb2"]
+[ext_resource type="PackedScene" uid="uid://8sb1bkospghk" path="res://Scenes/playermovement.tscn" id="3_f6tb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilv5w"]
+size = Vector2(95.68187, 136.31195)
+
+[node name="minigame 1" type="Node2D" unique_id=1590846616]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=691967005]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="background" type="TextureRect" parent="Parallax2D" unique_id=1667617870]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6014081, 0.60179585)
+texture = ExtResource("1_11mgy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1394833552]
+
+[node name="floor" type="TextureRect" parent="StaticBody2D" unique_id=1873389644]
+offset_top = -356.00003
+offset_right = 1920.0
+offset_bottom = 724.0
+scale = Vector2(0.60257286, 1.0176231)
+texture = ExtResource("2_f6tb2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=39678221]
+position = Vector2(576, 588)
+scale = Vector2(12.071252, 0.86835444)
+shape = SubResource("RectangleShape2D_ilv5w")
+
+[node name="Player" parent="." unique_id=1534202170 instance=ExtResource("3_f6tb2")]
+position = Vector2(156, 368)
