@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dw4mjo53ab60v"]
+
+[ext_resource type="Script" uid="uid://iwmm2ebutpin" path="res://Scenes/title_scene.gd" id="1_3cm6q"]
+[ext_resource type="Texture2D" uid="uid://cghxv7pagr7p4" path="res://ohh... crap..png" id="1_b6ftn"]
+[ext_resource type="FontFile" uid="uid://dfj7qr2x1vc2k" path="res://ByteBounce.ttf" id="2_3cm6q"]
+
+[node name="Title Screen" type="Node2D" unique_id=295713436]
+script = ExtResource("1_3cm6q")
+
+[node name="Background" type="TextureRect" parent="." unique_id=465960078]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.96114135, 0.96914005)
+texture = ExtResource("1_b6ftn")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1670788601]
+clip_contents = false
+offset_left = 467.0
+offset_top = 62.0
+offset_right = 1135.0
+offset_bottom = 263.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("2_3cm6q")
+theme_override_font_sizes/normal_font_size = 134
+text = "Ryder's Runnin' Late!"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=934661438]
+offset_left = 648.0
+offset_top = 317.00003
+offset_right = 953.00073
+offset_bottom = 557.51697
+scale = Vector2(0.9999976, 1.1600012)
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1865134460]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_3cm6q")
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=631105035]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_3cm6q")
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1154132360]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_3cm6q")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

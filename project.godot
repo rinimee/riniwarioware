@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="Ryder's Runnin' Late!"
+run/main_scene="uid://dw4mjo53ab60v"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [editor_plugins]
