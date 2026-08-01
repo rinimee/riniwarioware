@@ -1,10 +1,10 @@
 extends Node2D
-@onready var heart_container: HBoxContainer = $GarlicContainer
-@onready var heart: TextureRect = $GarlicContainer/Garlic
-@onready var heart_2: TextureRect = $GarlicContainer/Garlic2
-@onready var heart_3: TextureRect = $GarlicContainer/Garlic3
-@onready var heart_4: TextureRect = $GarlicContainer/Garlic4
-@onready var heart_5: TextureRect = $GarlicContainer/Garlic5
+@onready var heart_container: HBoxContainer = $HeartContainer
+@onready var heart: TextureRect = $HeartContainer/Heart
+@onready var heart_2: TextureRect = $HeartContainer/Heart2
+@onready var heart_3: TextureRect = $HeartContainer/Heart3
+@onready var heart_4: TextureRect = $HeartContainer/Heart4
+@onready var heart_5: TextureRect = $HeartContainer/Heart5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 

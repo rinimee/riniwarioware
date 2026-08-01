@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8c7psbp72cnj"
-path="res://.godot/imported/City4.png-f4de38b0486c5eb13877ee12b9f62a7f.ctex"
+uid="uid://b2kbwndxre7ub"
+path="res://.godot/imported/road.png-4af551bb93ab75eb3a9515fd4b3afcda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://City4/Bright/City4.png"
-dest_files=["res://.godot/imported/City4.png-f4de38b0486c5eb13877ee12b9f62a7f.ctex"]
+source_file="res://City4/road.png"
+dest_files=["res://.godot/imported/road.png-4af551bb93ab75eb3a9515fd4b3afcda.ctex"]
 
 [params]
 

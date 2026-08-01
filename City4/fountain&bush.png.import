@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsbqxyhjteoq6"
-path="res://.godot/imported/Sky_pale.png-513c644766fb006cbf2b9fc413aee6ca.ctex"
+uid="uid://c41ml0keklyh3"
+path="res://.godot/imported/fountain&bush.png-23450da91087f4b3ae2e886d2747203b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://City4/Pale/Sky_pale.png"
-dest_files=["res://.godot/imported/Sky_pale.png-513c644766fb006cbf2b9fc413aee6ca.ctex"]
+source_file="res://City4/fountain&bush.png"
+dest_files=["res://.godot/imported/fountain&bush.png-23450da91087f4b3ae2e886d2747203b.ctex"]
 
 [params]
 

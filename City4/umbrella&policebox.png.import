@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6dm6b7sc5t0x"
-path="res://.godot/imported/road.png-cd6c76325214c11e057c352ecd8ecea4.ctex"
+uid="uid://cbepb1ojf0g6a"
+path="res://.godot/imported/umbrella&policebox.png-f9ce47edcab5105c7345d1711aee56c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://City4/Bright/road.png"
-dest_files=["res://.godot/imported/road.png-cd6c76325214c11e057c352ecd8ecea4.ctex"]
+source_file="res://City4/umbrella&policebox.png"
+dest_files=["res://.godot/imported/umbrella&policebox.png-f9ce47edcab5105c7345d1711aee56c4.ctex"]
 
 [params]
 

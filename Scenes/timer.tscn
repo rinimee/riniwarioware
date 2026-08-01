@@ -1,4 +1,10 @@
-extends Node2D
+[gd_scene format=3 uid="uid://b5epjcp4x4vnm"]
+
+[ext_resource type="FontFile" uid="uid://dfj7qr2x1vc2k" path="res://ByteBounce.ttf" id="1_pvhx5"]
+
+[sub_resource type="GDScript" id="GDScript_ilv5w"]
+resource_name = "timer"
+script/source = "extends Node2D
 @onready var timer: RichTextLabel = $timer #literally just the richlabeltext
 
 var time : float
@@ -26,3 +32,18 @@ func Timer(start_time: float): # making a new function for timer countdown!
 	
 func wait(seconds: float) -> void: # write this simple function out for wait!
 	await get_tree().create_timer(seconds).timeout # makes u wait
+"
+
+[node name="Timer" type="Node2D" unique_id=150692099]
+script = SubResource("GDScript_ilv5w")
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=1336052280]
+clip_contents = false
+offset_left = 134.0
+offset_top = 5.0
+offset_right = 210.0
+offset_bottom = 113.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("1_pvhx5")
+theme_override_font_sizes/normal_font_size = 60
+text = "0.0"

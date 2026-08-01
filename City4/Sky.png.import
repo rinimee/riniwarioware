@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnbcmn3ubkpbk"
-path="res://.godot/imported/road_pale.png-af11da56dc5157c75337907165962758.ctex"
+uid="uid://cnl3q8obiwwnw"
+path="res://.godot/imported/Sky.png-32f9277ccbae285c92a75fe04c79e5f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://City4/Pale/road_pale.png"
-dest_files=["res://.godot/imported/road_pale.png-af11da56dc5157c75337907165962758.ctex"]
+source_file="res://City4/Sky.png"
+dest_files=["res://.godot/imported/Sky.png-32f9277ccbae285c92a75fe04c79e5f4.ctex"]
 
 [params]
 

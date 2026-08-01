@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://dhvc06qy44j60"]
+[gd_scene format=3 uid="uid://p2saw636jtqg"]
 
-[ext_resource type="Script" uid="uid://b01dvr8c32kwf" path="res://Scenes/timer_screen.gd" id="1_l88kf"]
-[ext_resource type="Texture2D" uid="uid://djtby5x6uy2xq" path="res://im so done for.png" id="2_aoy4m"]
-[ext_resource type="Texture2D" uid="uid://dfqwablkgba5r" path="res://heart.png" id="3_so330"]
-[ext_resource type="FontFile" uid="uid://dfj7qr2x1vc2k" path="res://ByteBounce.ttf" id="4_d3b2i"]
+[ext_resource type="Script" uid="uid://b01dvr8c32kwf" path="res://Scenes/timer_screen.gd" id="1_2fcgv"]
+[ext_resource type="Texture2D" uid="uid://djtby5x6uy2xq" path="res://im so done for.png" id="2_qnqh0"]
+[ext_resource type="Texture2D" uid="uid://dfqwablkgba5r" path="res://heart.png" id="3_lymix"]
+[ext_resource type="FontFile" uid="uid://dfj7qr2x1vc2k" path="res://ByteBounce.ttf" id="4_b7jio"]
 
 [node name="Timer Screen" type="Node2D" unique_id=2056245525]
-script = ExtResource("1_l88kf")
+script = ExtResource("1_2fcgv")
 
 [node name="Background" type="TextureRect" parent="." unique_id=474627858]
 offset_left = 1.0
 offset_right = 1200.0
 offset_bottom = 671.0
 scale = Vector2(0.9589849, 0.96721613)
-texture = ExtResource("2_aoy4m")
+texture = ExtResource("2_qnqh0")
 
 [node name="Heart Container" type="HBoxContainer" parent="." unique_id=1832328300]
 offset_left = 429.0
@@ -24,23 +24,23 @@ scale = Vector2(0.43444335, 0.37137938)
 
 [node name="Heart" type="TextureRect" parent="Heart Container" unique_id=1319504396]
 layout_mode = 2
-texture = ExtResource("3_so330")
+texture = ExtResource("3_lymix")
 
 [node name="Heart2" type="TextureRect" parent="Heart Container" unique_id=147551648]
 layout_mode = 2
-texture = ExtResource("3_so330")
+texture = ExtResource("3_lymix")
 
 [node name="Heart3" type="TextureRect" parent="Heart Container" unique_id=1765394944]
 layout_mode = 2
-texture = ExtResource("3_so330")
+texture = ExtResource("3_lymix")
 
 [node name="Heart4" type="TextureRect" parent="Heart Container" unique_id=2086017818]
 layout_mode = 2
-texture = ExtResource("3_so330")
+texture = ExtResource("3_lymix")
 
 [node name="Heart5" type="TextureRect" parent="Heart Container" unique_id=717157872]
 layout_mode = 2
-texture = ExtResource("3_so330")
+texture = ExtResource("3_lymix")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=339869845]
 clip_contents = false
@@ -51,7 +51,7 @@ offset_bottom = 329.7931
 scale = Vector2(1.200001, 1.16)
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 7
-theme_override_fonts/normal_font = ExtResource("4_d3b2i")
+theme_override_fonts/normal_font = ExtResource("4_b7jio")
 theme_override_font_sizes/normal_font_size = 50
 text = "Level #"
 
@@ -62,6 +62,6 @@ offset_top = 374.0
 offset_right = 804.99994
 offset_bottom = 427.0
 theme_override_constants/outline_size = 7
-theme_override_fonts/normal_font = ExtResource("4_d3b2i")
+theme_override_fonts/normal_font = ExtResource("4_b7jio")
 theme_override_font_sizes/normal_font_size = 66
 text = "0.0"

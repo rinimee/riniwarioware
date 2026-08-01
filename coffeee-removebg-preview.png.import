@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lugbox0cp8g3"
-path="res://.godot/imported/houses1.png-f214602c30e3405d3f7efcd41ff9d7fd.ctex"
+uid="uid://cik3x41fgvp3e"
+path="res://.godot/imported/coffeee-removebg-preview.png-57d7a35f1a368e3048cbce3cabc0e51e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://City4/Bright/houses1.png"
-dest_files=["res://.godot/imported/houses1.png-f214602c30e3405d3f7efcd41ff9d7fd.ctex"]
+source_file="res://coffeee-removebg-preview.png"
+dest_files=["res://.godot/imported/coffeee-removebg-preview.png-57d7a35f1a368e3048cbce3cabc0e51e.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://2dygqf64vbem"]
 
 [ext_resource type="Texture2D" uid="uid://bqvg4deiles0o" path="res://bright sky.png" id="1_f6tb2"]
-[ext_resource type="PackedScene" uid="uid://b5epjcp4x4vnm" path="res://Scenes/timer.tscn" id="1_vj06g"]
 [ext_resource type="Texture2D" uid="uid://b2kbwndxre7ub" path="res://City4/road.png" id="2_f6tb2"]
 [ext_resource type="Texture2D" uid="uid://bl84ncrxko71f" path="res://City4/houses.png" id="2_ojqsy"]
+[ext_resource type="PackedScene" uid="uid://blvh0aa6ovu2" path="res://Scenes/themed_timer.tscn" id="2_vj06g"]
 [ext_resource type="PackedScene" uid="uid://8sb1bkospghk" path="res://Scenes/playermovement.tscn" id="3_f6tb2"]
 [ext_resource type="Texture2D" uid="uid://b2wgjpw3avyr1" path="res://City4/houses2.png" id="3_jmcek"]
 [ext_resource type="Texture2D" uid="uid://lugbox0cp8g3" path="res://City4/houses1.png" id="4_ne1wf"]
@@ -12,15 +12,15 @@
 [ext_resource type="Script" uid="uid://dh64bqyx2v3ov" path="res://collecting_coffees.gd" id="9_qytqt"]
 [ext_resource type="Texture2D" uid="uid://cik3x41fgvp3e" path="res://coffeee-removebg-preview.png" id="10_vj06g"]
 
-[sub_resource type="GDScript" id="GDScript_yumb0"]
-resource_name = "minigame"
+[sub_resource type="GDScript" id="GDScript_qytqt"]
+resource_name = "minigame_script"
 script/source = "extends Node2D
-@onready var themed_timer = $CanvasLayer/Timer 
+@onready var themed_timer: Node2D = $ThemedTimer 
 # ^^^ You dragged this in the scene by the way 
 
 
 
-var garlic_collected = 0 # just keeping track of garlic collected
+var coffee_collected = 0 # just keeping track of coffee collected
 var timer_end = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
@@ -36,7 +36,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void: # running every frame brochacho
 	
-	if garlic_collected == 3: # the double equals is just an argument asking if it's the same, with \"=\" it'll give an error
+	if coffee_collected == 3: # the double equals is just an argument asking if it's the same, with \"=\" it'll give an error
 		if Global.minigames_done > 3: # we access a global script and see how many minigames have been compeleted
 			get_tree().change_scene_to_file(\"res://scenes/done_screen.tscn\") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
 		else:
@@ -48,8 +48,8 @@ func _process(delta: float) -> void: # running every frame brochacho
 		get_tree().change_scene_to_file(\"res://scenes/timer_screen.tscn\") # back to intermission
 		
 
-func garlic_collect() -> void: # cool function that you connect to those garlics
-	garlic_collected = garlic_collected +1
+func coffee_collect() -> void: # cool function that you connect to those coffees
+	coffee_collected = coffee_collected +1
 	return
 "
 
@@ -106,13 +106,7 @@ _data = {
 size = Vector2(75.5, 102)
 
 [node name="minigame 1" type="Node2D" unique_id=1590846616]
-script = SubResource("GDScript_yumb0")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1859090464]
-
-[node name="Timer" parent="CanvasLayer" unique_id=150692099 instance=ExtResource("1_vj06g")]
-position = Vector2(-90, 24)
-scale = Vector2(1.3092228, 1.4087019)
+script = SubResource("GDScript_qytqt")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=691967005]
 repeat_size = Vector2(1000, 0)
@@ -123,6 +117,9 @@ offset_right = 1917.1674
 offset_bottom = 1075.1155
 scale = Vector2(0.6014081, 0.60179585)
 texture = ExtResource("1_f6tb2")
+
+[node name="Node2D" parent="." unique_id=291366950 instance=ExtResource("2_vj06g")]
+position = Vector2(1012.5876, 292.13184)
 
 [node name="bg houses" type="TextureRect" parent="." unique_id=280226621]
 offset_left = 169.0
@@ -271,6 +268,6 @@ libraries/ = SubResource("AnimationLibrary_3yb6h")
 position = Vector2(952, 241)
 shape = SubResource("RectangleShape2D_wnlyl")
 
-[connection signal="coffee_collected" from="coffee" to="." method="coffee_collect"]
-[connection signal="coffee_collected" from="coffee2" to="." method="coffee_collect"]
-[connection signal="coffee_collected" from="coffee3" to="." method="coffee_collect"]
+[connection signal="coffee_collected" from="coffee" to="Player" method="_on_coffee_coffee_collected"]
+[connection signal="coffee_collected" from="coffee2" to="Player" method="_on_coffee_2_coffee_collected"]
+[connection signal="coffee_collected" from="coffee3" to="Player" method="_on_coffee_3_coffee_collected"]
