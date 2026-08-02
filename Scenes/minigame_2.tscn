@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://b8n6ku8isv51r"]
+
+[ext_resource type="Texture2D" uid="uid://cikrqrbm2pk28" path="res://City4/cloud yellow bg!.png" id="1_he4ew"]
+[ext_resource type="Texture2D" uid="uid://cik3x41fgvp3e" path="res://coffeee-removebg-preview.png" id="2_dfb65"]
+[ext_resource type="PackedScene" uid="uid://b5epjcp4x4vnm" path="res://Scenes/timer.tscn" id="2_l4g8r"]
+
+[sub_resource type="GDScript" id="GDScript_dfb65"]
+resource_name = "minigame_2"
+script/source = "extends Node2D
+@onready var themed_timer: Node2D = $Timer
+
+var buttons_pressed := 0
+var timer_end = false
+
+func _ready() -> void:
+	await themed_timer.Timer(7.0)
+	#after this is completed...
+	timer_end = true 
+
+
+func _process(delta: float) -> void:
+	if buttons_pressed == 4:
+		if Global.minigames_done > 3:
+			get_tree().change_scene_to_file(\"res://scenes/done_screen.tscn\")
+		else:
+			get_tree().change_scene_to_file(\"res://scenes/timer_screen.tscn\")
+	
+	if timer_end:
+		Global.lives -= 1
+		Global.minigames_done -=1
+		get_tree().change_scene_to_file(\"res://scenes/timer_screen.tscn\")
+
+
+func _on_button_1_pressed() -> void:
+	$Button_1.hide()
+	buttons_pressed += 1
+
+
+func _on_button_2_pressed() -> void:
+	$Button_2.hide()
+	buttons_pressed += 1
+
+func _on_button_3_pressed() -> void:
+	$Button_3.hide()
+	buttons_pressed += 1
+
+func _on_button_4_pressed() -> void:
+	$Button_4.hide()
+	buttons_pressed += 1
+
+func _on_button_5_pressed() -> void:
+	$Button_5.hide()
+	buttons_pressed += 1
+"
+
+[sub_resource type="GDScript" id="GDScript_ilv5w"]
+resource_name = "minigame_2_button"
+script/source = "extends TextureButton
+@onready var parent = $\"..\"
+
+func _on_pressed() -> void: #YOU NEED TO CONNECT THIS SIGNAL FROM THE TAB NEXT TO INSPECTOR!!
+	hide()
+	parent.buttons_pressed += 1
+"
+
+[node name="Minigame_2" type="Node2D" unique_id=1119372294]
+script = SubResource("GDScript_dfb65")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1977332080]
+offset_left = -6.1035156e-05
+offset_right = 1199.0
+offset_bottom = 671.0
+scale = Vector2(0.96088976, 0.9659736)
+texture = ExtResource("1_he4ew")
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=620737779]
+offset_left = 73.99998
+offset_top = 253.0
+offset_right = 481.99997
+offset_bottom = 865.0
+scale = Vector2(0.27078572, 0.2616023)
+texture_normal = ExtResource("2_dfb65")
+script = SubResource("GDScript_ilv5w")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=2029853172]
+offset_left = 362.0
+offset_top = 407.0
+offset_right = 770.0
+offset_bottom = 1019.0
+scale = Vector2(0.27078572, 0.2616023)
+texture_normal = ExtResource("2_dfb65")
+script = SubResource("GDScript_ilv5w")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=2093967504]
+offset_left = 896.99994
+offset_top = 415.0
+offset_right = 1305.0
+offset_bottom = 1027.0
+scale = Vector2(0.27078572, 0.2616023)
+texture_normal = ExtResource("2_dfb65")
+script = SubResource("GDScript_ilv5w")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=1659992171]
+offset_left = 591.0
+offset_top = 168.0
+offset_right = 999.00006
+offset_bottom = 780.0
+scale = Vector2(0.27078572, 0.2616023)
+texture_normal = ExtResource("2_dfb65")
+script = SubResource("GDScript_ilv5w")
+
+[node name="Button_5" type="TextureButton" parent="." unique_id=76651504]
+offset_left = 938.99994
+offset_top = 83.0
+offset_right = 1347.0
+offset_bottom = 695.0
+scale = Vector2(0.27078572, 0.2616023)
+texture_normal = ExtResource("2_dfb65")
+script = SubResource("GDScript_ilv5w")
+
+[node name="Timer" parent="." unique_id=150692099 instance=ExtResource("2_l4g8r")]
+position = Vector2(-210, 8.999996)
+scale = Vector2(1.9910662, 2.0355496)
+
+[connection signal="pressed" from="Button_1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button_2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button_3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button_4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button_5" to="." method="_on_button_5_pressed"]
