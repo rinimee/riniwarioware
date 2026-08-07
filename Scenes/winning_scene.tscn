@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ccxtcrn6pc3vc"]
+
+[ext_resource type="Texture2D" uid="uid://ply5ttdn2pjp" path="res://winning scene.png" id="1_8702y"]
+
+[node name="winning_scene" type="Node2D" unique_id=1207092047]
+
+[node name="background" type="TextureRect" parent="." unique_id=1896320078]
+offset_right = 1199.0
+offset_bottom = 671.0
+scale = Vector2(0.96078634, 0.96571654)
+texture = ExtResource("1_8702y")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c1ihsi6rmufh3"]
+
+[ext_resource type="Texture2D" uid="uid://b1w6jqg2qd0wd" path="res://losing scene.png" id="1_so61i"]
+
+[node name="loosing_scene" type="Node2D" unique_id=710991766]
+
+[node name="background" type="TextureRect" parent="." unique_id=1181978555]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.96067005, 0.9655134)
+texture = ExtResource("1_so61i")
